@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.post('/token',requestVerifier,  function(req, res) {
+app.post('/token',  function(req, res) {
      var mytoken= "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1OGQ1MjYxZDMwNTlmNzI3YzAzZjYzNTMiLCJuYW1lIjoiQW5hcyIsInBhc3N3b3JkIjoiJDJhJDEwJExFZUpONkE1NVJueXFkc3RHU21TT3VCS01PVEF0ZGZEMHJxVkFNWmVQVzl4OU5URnFzdnpDIiwiX192IjowfQ.2SWlwugKLJst0qzDlg6VOqw0-HIvuIXOgOLkuAzxXgo";
 //res.json({success: true, msg: 'Successful created new user.'});
     res.json({access_token: mytoken});
